@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Mac Linux USB Loader' target in the 'Mac Linux USB Loader' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

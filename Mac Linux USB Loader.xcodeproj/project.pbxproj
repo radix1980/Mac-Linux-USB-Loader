@@ -14,6 +14,8 @@
 		24CA6C011656F7A700061D2F /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CA6C001656F7A700061D2F /* Document.m */; };
 		24CA6C041656F7A700061D2F /* Document.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24CA6C021656F7A700061D2F /* Document.xib */; };
 		24CA6C071656F7A700061D2F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24CA6C051656F7A700061D2F /* MainMenu.xib */; };
+		24CA6C0E1656FA4200061D2F /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 24CA6C0D1656FA4200061D2F /* Icon.png */; };
+		24CA6C121656FB9500061D2F /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 24CA6C111656FB9500061D2F /* Icon.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		24CA6C001656F7A700061D2F /* Document.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Document.m; sourceTree = "<group>"; };
 		24CA6C031656F7A700061D2F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Document.xib; sourceTree = "<group>"; };
 		24CA6C061656F7A700061D2F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		24CA6C0D1656FA4200061D2F /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		24CA6C111656FB9500061D2F /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +52,8 @@
 		24CA6BDE1656F7A700061D2F = {
 			isa = PBXGroup;
 			children = (
+				24CA6C111656FB9500061D2F /* Icon.icns */,
+				24CA6C0D1656FA4200061D2F /* Icon.png */,
 				24CA6BF31656F7A700061D2F /* Mac Linux USB Loader */,
 				24CA6BEC1656F7A700061D2F /* Frameworks */,
 				24CA6BEA1656F7A700061D2F /* Products */,
@@ -160,6 +166,8 @@
 				24CA6BFE1656F7A700061D2F /* Credits.rtf in Resources */,
 				24CA6C041656F7A700061D2F /* Document.xib in Resources */,
 				24CA6C071656F7A700061D2F /* MainMenu.xib in Resources */,
+				24CA6C0E1656FA4200061D2F /* Icon.png in Resources */,
+				24CA6C121656FB9500061D2F /* Icon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +281,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mac Linux USB Loader/Mac Linux USB Loader-Prefix.pch";
 				INFOPLIST_FILE = "Mac Linux USB Loader/Mac Linux USB Loader-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -285,6 +294,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mac Linux USB Loader/Mac Linux USB Loader-Prefix.pch";
 				INFOPLIST_FILE = "Mac Linux USB Loader/Mac Linux USB Loader-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

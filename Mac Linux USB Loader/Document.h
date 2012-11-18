@@ -9,5 +9,10 @@
 #import <Cocoa/Cocoa.h>
 
 @interface Document : NSDocument
+- (IBAction)openDiskUtility:(id)sender;
+- (void)getUSBDeviceList;
+- (IBAction)updateDeviceList:(id)sender;
+@property (unsafe_unretained) IBOutlet NSPopUpButton *usbDriveDropdown;
+
 
 @end

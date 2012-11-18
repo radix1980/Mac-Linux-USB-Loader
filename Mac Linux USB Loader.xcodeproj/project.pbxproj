@@ -10,12 +10,12 @@
 		24CA6BEE1656F7A700061D2F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CA6BED1656F7A700061D2F /* Cocoa.framework */; };
 		24CA6BF81656F7A700061D2F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24CA6BF61656F7A700061D2F /* InfoPlist.strings */; };
 		24CA6BFA1656F7A700061D2F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CA6BF91656F7A700061D2F /* main.m */; };
-		24CA6BFE1656F7A700061D2F /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 24CA6BFC1656F7A700061D2F /* Credits.rtf */; };
 		24CA6C011656F7A700061D2F /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CA6C001656F7A700061D2F /* Document.m */; };
 		24CA6C041656F7A700061D2F /* Document.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24CA6C021656F7A700061D2F /* Document.xib */; };
 		24CA6C071656F7A700061D2F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24CA6C051656F7A700061D2F /* MainMenu.xib */; };
-		24CA6C0E1656FA4200061D2F /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 24CA6C0D1656FA4200061D2F /* Icon.png */; };
-		24CA6C121656FB9500061D2F /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 24CA6C111656FB9500061D2F /* Icon.icns */; };
+		24CA6C14165701A900061D2F /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 24CA6C13165701A900061D2F /* Icon.icns */; };
+		24CA6C1E1657020C00061D2F /* bootIA32.efi in Resources */ = {isa = PBXBuildFile; fileRef = 24CA6C18165701F000061D2F /* bootIA32.efi */; };
+		24CA6C1F1657020C00061D2F /* bootX64.efi in Resources */ = {isa = PBXBuildFile; fileRef = 24CA6C19165701F000061D2F /* bootX64.efi */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,13 +28,14 @@
 		24CA6BF71656F7A700061D2F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		24CA6BF91656F7A700061D2F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		24CA6BFB1656F7A700061D2F /* Mac Linux USB Loader-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mac Linux USB Loader-Prefix.pch"; sourceTree = "<group>"; };
-		24CA6BFD1656F7A700061D2F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		24CA6BFF1656F7A700061D2F /* Document.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Document.h; sourceTree = "<group>"; };
 		24CA6C001656F7A700061D2F /* Document.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Document.m; sourceTree = "<group>"; };
 		24CA6C031656F7A700061D2F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Document.xib; sourceTree = "<group>"; };
 		24CA6C061656F7A700061D2F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		24CA6C0D1656FA4200061D2F /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		24CA6C111656FB9500061D2F /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
+		24CA6C13165701A900061D2F /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Icon.icns; path = Resources/Icon.icns; sourceTree = "<group>"; };
+		24CA6C15165701BD00061D2F /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Resources/Icon.png; sourceTree = "<group>"; };
+		24CA6C18165701F000061D2F /* bootIA32.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = bootIA32.efi; sourceTree = "<group>"; };
+		24CA6C19165701F000061D2F /* bootX64.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = bootX64.efi; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +53,9 @@
 		24CA6BDE1656F7A700061D2F = {
 			isa = PBXGroup;
 			children = (
-				24CA6C111656FB9500061D2F /* Icon.icns */,
-				24CA6C0D1656FA4200061D2F /* Icon.png */,
+				24CA6C17165701F000061D2F /* EFI-Ubuntu */,
+				24CA6C13165701A900061D2F /* Icon.icns */,
+				24CA6C15165701BD00061D2F /* Icon.png */,
 				24CA6BF31656F7A700061D2F /* Mac Linux USB Loader */,
 				24CA6BEC1656F7A700061D2F /* Frameworks */,
 				24CA6BEA1656F7A700061D2F /* Products */,
@@ -106,9 +108,18 @@
 				24CA6BF61656F7A700061D2F /* InfoPlist.strings */,
 				24CA6BF91656F7A700061D2F /* main.m */,
 				24CA6BFB1656F7A700061D2F /* Mac Linux USB Loader-Prefix.pch */,
-				24CA6BFC1656F7A700061D2F /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		24CA6C17165701F000061D2F /* EFI-Ubuntu */ = {
+			isa = PBXGroup;
+			children = (
+				24CA6C18165701F000061D2F /* bootIA32.efi */,
+				24CA6C19165701F000061D2F /* bootX64.efi */,
+			);
+			name = "EFI-Ubuntu";
+			path = "Resources/EFI-Ubuntu";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,12 +173,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24CA6C1E1657020C00061D2F /* bootIA32.efi in Resources */,
+				24CA6C1F1657020C00061D2F /* bootX64.efi in Resources */,
 				24CA6BF81656F7A700061D2F /* InfoPlist.strings in Resources */,
-				24CA6BFE1656F7A700061D2F /* Credits.rtf in Resources */,
 				24CA6C041656F7A700061D2F /* Document.xib in Resources */,
 				24CA6C071656F7A700061D2F /* MainMenu.xib in Resources */,
-				24CA6C0E1656FA4200061D2F /* Icon.png in Resources */,
-				24CA6C121656FB9500061D2F /* Icon.icns in Resources */,
+				24CA6C14165701A900061D2F /* Icon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,14 +203,6 @@
 				24CA6BF71656F7A700061D2F /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		24CA6BFC1656F7A700061D2F /* Credits.rtf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				24CA6BFD1656F7A700061D2F /* en */,
-			);
-			name = Credits.rtf;
 			sourceTree = "<group>";
 		};
 		24CA6C021656F7A700061D2F /* Document.xib */ = {

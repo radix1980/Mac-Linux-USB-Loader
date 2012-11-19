@@ -1,0 +1,15 @@
+This is the Mac Linux USB Loader, a tool allowing you to take an ISO of a Linux distribution and make it boot using EFI. It requires a single USB drive formatted as FAT with at least 2 GB free recommended.
+
+The tool is necessary to make certain Linux distributions boot that do not have EFI booting support. Many distributions are adding this with the release of Windows 8, but it has not been finalized and is still nonstandard by most distros. 
+
+If you wish to contribute to the code or fork the repository, please do so. The application is currently in beta with major functionality chunks missing and once I reach beta I will need everyone's help to make it a great tool, hopefully along the popularity lines of unetbootin or similar tools.
+
+I created this tool, if you care, for several reasons:
+
+1) None of the other tools available (esp. unetbootin) feel native and operate as you would expect on the Mac platform.
+2) None of the other methods of which I am aware have the ability to make the archives boot on Intel Macs.
+3) It was personally a pain in the neck getting other distros to boot via USB on Macs.
+
+That being said, it does have a few shortcomings:
+
+1) Linux fails to have graphics on some Macs (i.e Macbook Pros with nVidia graphics), which in some cases prevents boot, but this is not necessary an issue with Mac Linux USB Loader as much as it is an issue with the video drivers that ship with most distros.

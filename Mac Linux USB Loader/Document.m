@@ -23,8 +23,6 @@
 
 - (NSString *)windowNibName
 {
-    // Override returning the nib file name of the document
-    // If you need to use a subclass of NSWindowController or if your document supports multiple NSWindowControllers, you should remove this method and override -makeWindowControllers instead.
     return @"Document";
 }
 
@@ -32,7 +30,6 @@
 {
     [super windowControllerDidLoadNib:aController];
     [self getUSBDeviceList];
-    // Add any code here that needs to be executed once the windowController has loaded the document's window.
 }
 
 - (void)getUSBDeviceList
@@ -50,10 +47,10 @@
     for (NSString *volumePath in volumes) {
         //Get filesystem info about each of the mounted volumes
         if ([[NSWorkspace sharedWorkspace] getFileSystemInfoForPath:volumePath isRemovable:&isRemovable isWritable:&isWritable isUnmountable:&isUnmountable description:&description type:&volumeType]) {
-            //Write out to stdout
-            //printf("%s\n", [[NSString stringWithFormat:@"%@ %@      %@      %d      %d      %d", volumePath, description, volumeType, isRemovable, isWritable, isUnmountable] UTF8String]);
-            NSString * title = [NSString stringWithFormat:@"Drive 1: %@",volumePath];
-            [usbDriveDropdown addItemWithTitle:title];
+            if ([volumeType isEqualToString:@"msdos"]) {
+                NSString * title = [NSString stringWithFormat:@"Drive type %@ at %@", volumeType, volumePath];
+                [usbDriveDropdown addItemWithTitle:title];
+            }
         }
     }
     
@@ -64,9 +61,13 @@
     [self getUSBDeviceList];
 }
 
+- (IBAction)makeLiveUSB:(id)sender {
+    NSString* directory = [usbDriveDropdown titleOfSelectedItem];
+}
+
 + (BOOL)autosavesInPlace
 {
-    return YES;
+    return NO;
 }
 
 - (BOOL)readFromData:(NSData *)data ofType:(NSString *)typeName error:(NSError **)outError

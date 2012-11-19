@@ -12,7 +12,7 @@
 				<string>iso</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string></string>
+			<string>Icon</string>
 			<key>CFBundleTypeName</key>
 			<string>DocumentType</string>
 			<key>CFBundleTypeOSTypes</key>
@@ -20,7 +20,7 @@
 				<string>????</string>
 			</array>
 			<key>CFBundleTypeRole</key>
-			<string>Viewer</string>
+			<string>Editor</string>
 			<key>NSDocumentClass</key>
 			<string>Document</string>
 		</dict>
@@ -29,6 +29,8 @@
 			<array>
 				<string>dmg</string>
 			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>Icon</string>
 			<key>CFBundleTypeName</key>
 			<string>DCTemp</string>
 			<key>CFBundleTypeOSTypes</key>

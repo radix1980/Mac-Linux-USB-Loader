@@ -16,6 +16,7 @@
 		24CA6C14165701A900061D2F /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 24CA6C13165701A900061D2F /* Icon.icns */; };
 		24CA6C1E1657020C00061D2F /* bootIA32.efi in Resources */ = {isa = PBXBuildFile; fileRef = 24CA6C18165701F000061D2F /* bootIA32.efi */; };
 		24CA6C1F1657020C00061D2F /* bootX64.efi in Resources */ = {isa = PBXBuildFile; fileRef = 24CA6C19165701F000061D2F /* bootX64.efi */; };
+		24DB8AB91659AB0700F7C947 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 24DB8AB81659AB0700F7C947 /* README */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,8 @@
 		24CA6C15165701BD00061D2F /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Resources/Icon.png; sourceTree = "<group>"; };
 		24CA6C18165701F000061D2F /* bootIA32.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = bootIA32.efi; sourceTree = "<group>"; };
 		24CA6C19165701F000061D2F /* bootX64.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = bootX64.efi; sourceTree = "<group>"; };
+		24DB8AB71659A6D500F7C947 /* Mac Linux USB Loader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Mac Linux USB Loader.entitlements"; sourceTree = "<group>"; };
+		24DB8AB81659AB0700F7C947 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +56,7 @@
 		24CA6BDE1656F7A700061D2F = {
 			isa = PBXGroup;
 			children = (
+				24DB8AB81659AB0700F7C947 /* README */,
 				24CA6C17165701F000061D2F /* EFI-Ubuntu */,
 				24CA6C13165701A900061D2F /* Icon.icns */,
 				24CA6C15165701BD00061D2F /* Icon.png */,
@@ -92,6 +96,7 @@
 		24CA6BF31656F7A700061D2F /* Mac Linux USB Loader */ = {
 			isa = PBXGroup;
 			children = (
+				24DB8AB71659A6D500F7C947 /* Mac Linux USB Loader.entitlements */,
 				24CA6BFF1656F7A700061D2F /* Document.h */,
 				24CA6C001656F7A700061D2F /* Document.m */,
 				24CA6C021656F7A700061D2F /* Document.xib */,
@@ -179,6 +184,7 @@
 				24CA6C041656F7A700061D2F /* Document.xib in Resources */,
 				24CA6C071656F7A700061D2F /* MainMenu.xib in Resources */,
 				24CA6C14165701A900061D2F /* Icon.icns in Resources */,
+				24DB8AB91659AB0700F7C947 /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +286,7 @@
 		24CA6C0B1656F7A700061D2F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Mac Linux USB Loader/Mac Linux USB Loader.entitlements";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mac Linux USB Loader/Mac Linux USB Loader-Prefix.pch";
@@ -293,6 +300,7 @@
 		24CA6C0C1656F7A700061D2F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Mac Linux USB Loader/Mac Linux USB Loader.entitlements";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mac Linux USB Loader/Mac Linux USB Loader-Prefix.pch";
@@ -322,6 +330,7 @@
 				24CA6C0C1656F7A700061D2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

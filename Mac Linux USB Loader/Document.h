@@ -12,6 +12,7 @@
 - (IBAction)openDiskUtility:(id)sender;
 - (void)getUSBDeviceList;
 - (IBAction)updateDeviceList:(id)sender;
+- (IBAction)makeLiveUSB:(id)sender;
 @property (unsafe_unretained) IBOutlet NSPopUpButton *usbDriveDropdown;
 
 

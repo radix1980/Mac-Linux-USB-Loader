@@ -8,8 +8,8 @@ I created this tool, if you care, for several reasons:
 
 1) None of the other tools available (esp. unetbootin) feel native and operate as you would expect on the Mac platform.
 2) None of the other methods of which I am aware have the ability to make the archives boot on Intel Macs.
-3) It was personally a pain in the neck getting other distros to boot via USB on Macs.
+3) It was personally a pain in the neck getting Linux distros to boot via USB on Macs.
 
 That being said, it does have a few shortcomings:
 
-1) Linux fails to have graphics on some Macs (i.e Macbook Pros with nVidia graphics), which in some cases prevents boot, but this is not necessary an issue with Mac Linux USB Loader as much as it is an issue with the video drivers that ship with most distros.
+1) Linux fails to have graphics on some Macs (i.e Macbook Pros with nVidia graphics), which in some cases prevents boot, but this is not necessarily an issue with Mac Linux USB Loader as much as it is an issue with the video drivers that ship with most distros.

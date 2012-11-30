@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24C9FCCE1664204B0080E6E4 /* USBDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C9FCCD1664204B0080E6E4 /* USBDevice.m */; };
 		24CA6BEE1656F7A700061D2F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CA6BED1656F7A700061D2F /* Cocoa.framework */; };
 		24CA6BF81656F7A700061D2F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24CA6BF61656F7A700061D2F /* InfoPlist.strings */; };
 		24CA6BFA1656F7A700061D2F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CA6BF91656F7A700061D2F /* main.m */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24C9FCCC1664204B0080E6E4 /* USBDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USBDevice.h; sourceTree = "<group>"; };
+		24C9FCCD1664204B0080E6E4 /* USBDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USBDevice.m; sourceTree = "<group>"; };
 		24CA6BE91656F7A700061D2F /* Mac Linux USB Loader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mac Linux USB Loader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24CA6BED1656F7A700061D2F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		24CA6BF01656F7A700061D2F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -99,6 +102,8 @@
 				24DB8AB71659A6D500F7C947 /* Mac Linux USB Loader.entitlements */,
 				24CA6BFF1656F7A700061D2F /* Document.h */,
 				24CA6C001656F7A700061D2F /* Document.m */,
+				24C9FCCC1664204B0080E6E4 /* USBDevice.h */,
+				24C9FCCD1664204B0080E6E4 /* USBDevice.m */,
 				24CA6C021656F7A700061D2F /* Document.xib */,
 				24CA6C051656F7A700061D2F /* MainMenu.xib */,
 				24CA6BF41656F7A700061D2F /* Supporting Files */,
@@ -197,6 +202,7 @@
 			files = (
 				24CA6BFA1656F7A700061D2F /* main.m in Sources */,
 				24CA6C011656F7A700061D2F /* Document.m in Sources */,
+				24C9FCCE1664204B0080E6E4 /* USBDevice.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

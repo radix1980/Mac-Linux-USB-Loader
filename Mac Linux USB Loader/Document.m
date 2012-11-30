@@ -2,21 +2,25 @@
 //  Document.m
 //  Mac Linux USB Loader
 //
-//  Created by Ryan Bowring on 11/16/12.
-//  Copyright (c) 2012 Ryan Bowring. All rights reserved.
+//  Created by SevenBits on 11/26/12.
+//  Copyright (c) 2012 SevenBits. All rights reserved.
 //
 
 #import "Document.h"
+#import "USBDevice.h"
 
 @implementation Document
 
 @synthesize usbDriveDropdown;
 
+NSMutableDictionary *usbs;
+USBDevice *device;
+
 - (id)init
 {
     self = [super init];
     if (self) {
-        // EMPTY
+        //EMPTY
     }
     return self;
 }
@@ -29,6 +33,8 @@
 - (void)windowControllerDidLoadNib:(NSWindowController *)aController
 {
     [super windowControllerDidLoadNib:aController];
+    usbs = [[NSMutableDictionary alloc]initWithCapacity:10]; //A maximum capacity of 10 is fine, nobody has that many ports anyway
+    device = [USBDevice new];
     [self getUSBDeviceList];
 }
 
@@ -42,6 +48,7 @@
     NSString *description, *volumeType;
     
     [usbDriveDropdown removeAllItems];
+    [usbs removeAllObjects];
     
     //Iterate through the array using fast enumeration
     for (NSString *volumePath in volumes) {
@@ -49,12 +56,14 @@
         if ([[NSWorkspace sharedWorkspace] getFileSystemInfoForPath:volumePath isRemovable:&isRemovable isWritable:&isWritable isUnmountable:&isUnmountable description:&description type:&volumeType]) {
             if ([volumeType isEqualToString:@"msdos"]) {
                 NSString * title = [NSString stringWithFormat:@"Drive type %@ at %@", volumeType, volumePath];
+                [usbs setObject:volumePath forKey:title]; //Add the path of the usb to a dictionary so later we can tell what USB
+                                                          //they are refering to when they select one from a drop down.
                 [usbDriveDropdown addItemWithTitle:title];
             }
         }
     }
     
-    //Exit
+    // Exit
 }
 
 - (IBAction)updateDeviceList:(id)sender {
@@ -62,7 +71,24 @@
 }
 
 - (IBAction)makeLiveUSB:(id)sender {
-    NSString* directory = [usbDriveDropdown titleOfSelectedItem];
+    if ([usbDriveDropdown numberOfItems] != 0) {
+        NSString* directoryName = [usbDriveDropdown titleOfSelectedItem];
+        NSString* usbRoot = [usbs valueForKey:directoryName];
+        NSString* isoFilePath = [[self fileURL] absoluteString];
+        
+        if (isoFilePath == nil) {
+            return;
+        }
+        
+        // Make the Live USB!
+        if ([device prepareUSB:usbRoot] == YES) {
+            // If there is no document open, don't copy the ISO file.
+            [device copyISO:usbRoot:isoFilePath];
+        }
+    }
+    else {
+        // TODO
+    }
 }
 
 + (BOOL)autosavesInPlace

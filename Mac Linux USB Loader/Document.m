@@ -12,8 +12,11 @@
 @implementation Document
 
 @synthesize usbDriveDropdown;
+@synthesize window;
+@synthesize makeUSBButton;
 
 NSMutableDictionary *usbs;
+NSString *isoFilePath;
 USBDevice *device;
 
 - (id)init
@@ -35,6 +38,14 @@ USBDevice *device;
     [super windowControllerDidLoadNib:aController];
     usbs = [[NSMutableDictionary alloc]initWithCapacity:10]; //A maximum capacity of 10 is fine, nobody has that many ports anyway
     device = [USBDevice new];
+    [device setWindow:window];
+    
+    isoFilePath = [[self fileURL] absoluteString];
+    
+    if (isoFilePath == nil) {
+        [makeUSBButton setEnabled: NO];
+    }
+    
     [self getUSBDeviceList];
 }
 
@@ -71,14 +82,15 @@ USBDevice *device;
 }
 
 - (IBAction)makeLiveUSB:(id)sender {
+    isoFilePath = [[self fileURL] absoluteString];
+    
+    if (isoFilePath == nil) {
+        [makeUSBButton setEnabled: NO];
+    }
+    
     if ([usbDriveDropdown numberOfItems] != 0) {
         NSString* directoryName = [usbDriveDropdown titleOfSelectedItem];
         NSString* usbRoot = [usbs valueForKey:directoryName];
-        NSString* isoFilePath = [[self fileURL] absoluteString];
-        
-        if (isoFilePath == nil) {
-            return;
-        }
         
         // Make the Live USB!
         if ([device prepareUSB:usbRoot] == YES) {
@@ -89,6 +101,10 @@ USBDevice *device;
     else {
         // TODO
     }
+}
+
+- (IBAction)openGithubPage:(id)sender {
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://github.com/SevenBits/Mac-Linux-USB-Loader"]];
 }
 
 + (BOOL)autosavesInPlace

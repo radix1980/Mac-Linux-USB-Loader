@@ -47,7 +47,7 @@
 				<int key="NSWindowStyleMask">15</int>
 				<int key="NSWindowBacking">2</int>
 				<string key="NSWindowRect">{{463, 235}, {505, 279}}</string>
-				<int key="NSWTFlags">813170688</int>
+				<int key="NSWTFlags">813172736</int>
 				<string key="NSWindowTitle">Window</string>
 				<string key="NSWindowClass">NSWindow</string>
 				<string key="NSViewClass">View</string>
@@ -231,6 +231,8 @@
 											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView" ref="48310739"/>
 											<string key="NSReuseIdentifierKey">_NS:9</string>
+											<string key="NSHuggingPriority">{242, 750}</string>
+											<string key="NSAntiCompressionPriority">{745, 739}</string>
 											<bool key="NSEnabled">YES</bool>
 											<object class="NSPopUpButtonCell" key="NSCell" id="492385772">
 												<int key="NSCellFlags">-2076180416</int>

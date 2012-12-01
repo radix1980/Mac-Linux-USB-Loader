@@ -20,6 +20,7 @@ NSWindow *window;
 - (BOOL)prepareUSB:(NSString *)path {
     NSString *bootLoaderPath = [[NSBundle mainBundle] pathForResource:@"bootX64" ofType:@"efi" inDirectory:@""];
     NSString *finalPath = [NSString stringWithFormat:@"%@/efi/boot/bootX64.efi", path];
+    NSString *tempPath = [NSString stringWithFormat:@"%@/efi/boot", path];
     
     // Check if the EFI bootloader already exists.
     BOOL fileExists = [[NSFileManager defaultManager] fileExistsAtPath:finalPath];
@@ -33,6 +34,8 @@ NSWindow *window;
         [alert beginSheetModalForWindow:window modalDelegate:self didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];
         return NO;
     }
+    
+    [[NSFileManager new] createDirectoryAtPath:tempPath withIntermediateDirectories:YES attributes:nil error:nil];
     
     // Copy the EFI bootloader.
     if ([[NSFileManager new] copyPath:bootLoaderPath toPath:finalPath handler:nil] == NO) {
@@ -59,9 +62,9 @@ NSWindow *window;
         NSAlert *alert = [[NSAlert alloc] init];
         [alert addButtonWithTitle:@"Abort"];
         [alert setMessageText:@"Failed to create bootable USB."];
-        [alert setInformativeText:@"There is already an EFI executable on this device. If it is from a previous run of Mac Linux USB Loader, you must delete the EFI folder on the USB drive and then run this tool."];
+        [alert setInformativeText:@"There is already a Linux distro ISO on this device. If it is from a previous run of Mac Linux USB Loader, you must delete the EFI folder on the USB drive and then run this tool."];
         [alert setAlertStyle:NSWarningAlertStyle];
-        [alert beginSheetModalForWindow:nil modalDelegate:self didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];
+        [alert beginSheetModalForWindow:window modalDelegate:self didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];
         return NO;
     }
     
@@ -70,9 +73,9 @@ NSWindow *window;
         NSAlert *alert = [[NSAlert alloc] init];
         [alert addButtonWithTitle:@"Abort"];
         [alert setMessageText:@"Failed to create bootable USB."];
-        [alert setInformativeText:@"Could not copy the EFI bootloader to the USB device."];
+        [alert setInformativeText:@"Could not copy the Linux ISO to the USB device."];
         [alert setAlertStyle:NSWarningAlertStyle];
-        [alert beginSheetModalForWindow:nil modalDelegate:self didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];
+        [alert beginSheetModalForWindow:window modalDelegate:self didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];
         return NO;
     }
     else {

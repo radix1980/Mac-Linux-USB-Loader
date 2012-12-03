@@ -14,6 +14,7 @@
 @synthesize usbDriveDropdown;
 @synthesize window;
 @synthesize makeUSBButton;
+@synthesize spinner;
 
 NSMutableDictionary *usbs;
 NSString *isoFilePath;
@@ -92,10 +93,15 @@ USBDevice *device;
         NSString* directoryName = [usbDriveDropdown titleOfSelectedItem];
         NSString* usbRoot = [usbs valueForKey:directoryName];
         
+        [spinner setUsesThreadedAnimation:YES];
+        [spinner setDoubleValue:0.0];
+        [spinner startAnimation:self];
         // Make the Live USB!
         if ([device prepareUSB:usbRoot] == YES) {
-            // If there is no document open, don't copy the ISO file.
+            [spinner setDoubleValue:50.0];
             [device copyISO:usbRoot:isoFilePath];
+            [spinner setDoubleValue:100.0];
+            [spinner stopAnimation:self];
         }
     }
     else {
@@ -122,5 +128,26 @@ USBDevice *device;
 
 - (IBAction)openDiskUtility:(id)sender {
     [[NSWorkspace sharedWorkspace] launchApplication:@"/Applications/Utilities/Disk Utility.app"];
+}
+
+- (IBAction)eraseLiveBoot:(id)sender {
+    if ([usbDriveDropdown numberOfItems] != 0) {
+        NSString *directoryName = [usbDriveDropdown titleOfSelectedItem];
+        NSString *usbRoot = [usbs valueForKey:directoryName];
+        NSString *tempPath = [NSString stringWithFormat:@"%@/efi", usbRoot];
+        
+        NSFileManager* fm = [[NSFileManager alloc] init];
+        NSDirectoryEnumerator* en = [fm enumeratorAtPath:tempPath];
+        NSError *err = nil;
+        BOOL res;
+        
+        NSString *file;
+        while (file = [en nextObject]) {
+            res = [fm removeItemAtPath:[tempPath stringByAppendingPathComponent:file] error:&err];
+            if (!res && err) {
+                NSLog(@"oops: %@", err);
+            }
+        }
+    }
 }
 @end

@@ -776,7 +776,7 @@
 				<nil key="NSViewClass"/>
 				<nil key="NSUserInterfaceItemIdentifier"/>
 				<object class="NSView" key="NSWindowView" id="698088862">
-					<reference key="NSNextResponder"/>
+					<nil key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
 					<array class="NSMutableArray" key="NSSubviews">
 						<object class="NSImageView" id="507124753">
@@ -914,7 +914,7 @@
 										<object class="NSTextView" id="48996168">
 											<reference key="NSNextResponder" ref="757830437"/>
 											<int key="NSvFlags">2322</int>
-											<string key="NSFrameSize">{226, 154}</string>
+											<string key="NSFrameSize">{226, 94}</string>
 											<reference key="NSSuperview" ref="757830437"/>
 											<reference key="NSNextKeyView" ref="478119800"/>
 											<string key="NSReuseIdentifierKey">_NS:13</string>
@@ -1029,7 +1029,6 @@ VGhhbmtzIGEgbWlsbGlvbiE</bytes>
 											</object>
 											<int key="NSTVFlags">6</int>
 											<string key="NSMaxSize">{463, 10000000}</string>
-											<string key="NSMinize">{226, 94}</string>
 											<nil key="NSDelegate"/>
 										</object>
 									</array>
@@ -1051,7 +1050,6 @@ VGhhbmtzIGEgbWlsbGlvbiE</bytes>
 									<string key="NSFrame">{{226, 0}, {15, 94}}</string>
 									<reference key="NSSuperview" ref="433004644"/>
 									<string key="NSReuseIdentifierKey">_NS:83</string>
-									<bool key="NSEnabled">YES</bool>
 									<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 									<reference key="NSTarget" ref="433004644"/>
 									<string key="NSAction">_doScroller:</string>
@@ -1076,7 +1074,7 @@ VGhhbmtzIGEgbWlsbGlvbiE</bytes>
 							<reference key="NSSuperview" ref="698088862"/>
 							<reference key="NSNextKeyView" ref="757830437"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
-							<int key="NSsFlags">133200</int>
+							<int key="NSsFlags">133136</int>
 							<reference key="NSVScroller" ref="967479522"/>
 							<reference key="NSHScroller" ref="478119800"/>
 							<reference key="NSContentView" ref="757830437"/>
@@ -1086,7 +1084,6 @@ VGhhbmtzIGEgbWlsbGlvbiE</bytes>
 						</object>
 					</array>
 					<string key="NSFrameSize">{447, 303}</string>
-					<reference key="NSSuperview"/>
 					<reference key="NSNextKeyView" ref="507124753"/>
 					<string key="NSReuseIdentifierKey">_NS:21</string>
 				</object>

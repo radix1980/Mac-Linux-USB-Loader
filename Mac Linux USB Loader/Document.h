@@ -11,7 +11,9 @@
 @interface Document : NSDocument
 @property (strong) IBOutlet NSWindow *window;
 @property (unsafe_unretained) IBOutlet NSButton *makeUSBButton;
+@property (unsafe_unretained) IBOutlet NSProgressIndicator *spinner;
 - (IBAction)openDiskUtility:(id)sender;
+- (IBAction)eraseLiveBoot:(id)sender;
 - (void)getUSBDeviceList;
 - (IBAction)updateDeviceList:(id)sender;
 - (IBAction)makeLiveUSB:(id)sender;

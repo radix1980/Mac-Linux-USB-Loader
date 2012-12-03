@@ -24,7 +24,7 @@ USBDevice *device;
 {
     self = [super init];
     if (self) {
-        //EMPTY
+        // EMPTY
     }
     return self;
 }

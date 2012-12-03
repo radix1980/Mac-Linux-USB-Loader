@@ -13,7 +13,5 @@
 - (void)setWindow:(NSWindow *) window;
 - (BOOL)prepareUSB:(NSString *)path;
 - (BOOL)copyISO:(NSString *)path:(NSString *)isoFile;
-- (void)alertDidEnd:(NSAlert *)alert returnCode:(NSInteger)returnCode
-        contextInfo:(void *)contextInfo;
 
 @end

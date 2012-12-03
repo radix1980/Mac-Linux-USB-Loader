@@ -38,7 +38,7 @@ NSWindow *window;
     [[NSFileManager new] createDirectoryAtPath:tempPath withIntermediateDirectories:YES attributes:nil error:nil];
     
     // Copy the EFI bootloader.
-    if ([[NSFileManager new] copyPath:bootLoaderPath toPath:finalPath handler:nil] == NO) {
+    if ([[NSFileManager new] copyItemAtPath:bootLoaderPath toPath:finalPath error:nil] == NO) {
         NSAlert *alert = [[NSAlert alloc] init];
         [alert addButtonWithTitle:@"Abort"];
         [alert setMessageText:@"Failed to create bootable USB."];
@@ -68,8 +68,9 @@ NSWindow *window;
         return NO;
     }
     
+    NSLog(@"Writing from %@.", isoFile);
     // Copy the Linux distro ISO.
-    if ([[NSFileManager new] copyPath:isoFile toPath:finalPath handler:nil] == NO) {
+    if ([[NSFileManager new] copyItemAtPath:[[NSURL URLWithString:isoFile] path] toPath:finalPath error:nil] == NO) {
         NSAlert *alert = [[NSAlert alloc] init];
         [alert addButtonWithTitle:@"Abort"];
         [alert setMessageText:@"Failed to create bootable USB."];
@@ -81,11 +82,6 @@ NSWindow *window;
     else {
         return YES;
     }
-}
-
-- (void)alertDidEnd:(NSAlert *)alert returnCode:(NSInteger)returnCode
-        contextInfo:(void *)contextInfo {
-    // EMPTY because we do not need to process here for generic messages.
 }
 
 @end

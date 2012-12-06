@@ -15,6 +15,7 @@
 @synthesize window;
 @synthesize makeUSBButton;
 @synthesize spinner;
+@synthesize prefsWindow;
 
 NSMutableDictionary *usbs;
 NSString *isoFilePath;
@@ -43,7 +44,7 @@ USBDevice *device;
     
     isoFilePath = [[self fileURL] absoluteString];
     
-    if (isoFilePath == nil) {
+    if (isoFilePath == nil || [usbDriveDropdown numberOfItems] == 1) {
         [makeUSBButton setEnabled: NO];
     }
     
@@ -75,6 +76,10 @@ USBDevice *device;
         }
     }
     
+    if (isoFilePath == nil && [usbDriveDropdown numberOfItems] != 1) {
+        [makeUSBButton setEnabled: YES];
+    }
+    
     // Exit
 }
 
@@ -89,7 +94,7 @@ USBDevice *device;
         [makeUSBButton setEnabled: NO];
     }
     
-    if ([usbDriveDropdown numberOfItems] != 0) {
+    if ([usbDriveDropdown numberOfItems] != 1) {
         NSString* directoryName = [usbDriveDropdown titleOfSelectedItem];
         NSString* usbRoot = [usbs valueForKey:directoryName];
         
@@ -149,5 +154,9 @@ USBDevice *device;
             }
         }
     }
+}
+- (IBAction)showApplicationPrefs:(id)sender {
+    [self.window makeKeyAndOrderFront:prefsWindow];
+    [self.window setOrderedIndex:0];
 }
 @end

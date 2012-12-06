@@ -10,7 +10,9 @@
 
 @interface Document : NSDocument
 @property (strong) IBOutlet NSWindow *window;
+@property (strong) IBOutlet NSPanel *prefsWindow;
 @property (unsafe_unretained) IBOutlet NSButton *makeUSBButton;
+- (IBAction)showApplicationPrefs:(id)sender;
 @property (unsafe_unretained) IBOutlet NSProgressIndicator *spinner;
 - (IBAction)openDiskUtility:(id)sender;
 - (IBAction)eraseLiveBoot:(id)sender;

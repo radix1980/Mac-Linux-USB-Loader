@@ -35,9 +35,9 @@ USBDevice *device;
     return @"Document";
 }
 
-- (void)windowControllerDidLoadNib:(NSWindowController *)aController
+- (void)windowControllerDidLoadNib:(NSWindowController *)controller
 {
-    [super windowControllerDidLoadNib:aController];
+    [super windowControllerDidLoadNib:controller];
     usbs = [[NSMutableDictionary alloc]initWithCapacity:10]; //A maximum capacity of 10 is fine, nobody has that many ports anyway
     device = [USBDevice new];
     [device setWindow:window];
@@ -60,8 +60,8 @@ USBDevice *device;
     BOOL isRemovable, isWritable, isUnmountable;
     NSString *description, *volumeType;
     
-    [usbDriveDropdown removeAllItems];
-    [usbs removeAllObjects];
+    [usbDriveDropdown removeAllItems]; // Clear the dropdown list.
+    [usbs removeAllObjects];           // Clear the dictionary of the list of USB drives.
     
     //Iterate through the array using fast enumeration
     for (NSString *volumePath in volumes) {
@@ -154,9 +154,5 @@ USBDevice *device;
             }
         }
     }
-}
-- (IBAction)showApplicationPrefs:(id)sender {
-    [self.window makeKeyAndOrderFront:prefsWindow];
-    [self.window setOrderedIndex:0];
 }
 @end

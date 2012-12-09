@@ -71,6 +71,7 @@
 											<array class="NSMutableArray" key="NSSubviews"/>
 											<string key="NSFrame">{{168, 13}, {193, 32}}</string>
 											<reference key="NSSuperview" ref="1037603364"/>
+											<reference key="NSWindow"/>
 											<string key="NSReuseIdentifierKey">_NS:9</string>
 											<bool key="NSEnabled">YES</bool>
 											<object class="NSButtonCell" key="NSCell" id="15053030">
@@ -99,6 +100,7 @@
 											<array class="NSMutableArray" key="NSSubviews"/>
 											<string key="NSFrame">{{361, 13}, {130, 32}}</string>
 											<reference key="NSSuperview" ref="1037603364"/>
+											<reference key="NSWindow"/>
 											<string key="NSReuseIdentifierKey">_NS:9</string>
 											<bool key="NSEnabled">YES</bool>
 											<object class="NSButtonCell" key="NSCell" id="160355437">
@@ -122,6 +124,7 @@
 											<int key="NSvFlags">268</int>
 											<string key="NSFrame">{{171, 114}, {299, 41}}</string>
 											<reference key="NSSuperview" ref="1037603364"/>
+											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView" ref="336928385"/>
 											<string key="NSReuseIdentifierKey">_NS:1535</string>
 											<bool key="NSEnabled">YES</bool>
@@ -171,6 +174,7 @@
 											</set>
 											<string key="NSFrame">{{0, -1}, {166, 166}}</string>
 											<reference key="NSSuperview" ref="1037603364"/>
+											<reference key="NSWindow"/>
 											<string key="NSReuseIdentifierKey">_NS:9</string>
 											<bool key="NSEnabled">YES</bool>
 											<object class="NSImageCell" key="NSCell" id="365278556">
@@ -192,6 +196,7 @@
 									</array>
 									<string key="NSFrameSize">{505, 175}</string>
 									<reference key="NSSuperview" ref="899740021"/>
+									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="226954976"/>
 									<string key="NSReuseIdentifierKey">_NS:11</string>
 									<string key="NSClassName">NSView</string>
@@ -205,6 +210,7 @@
 											<int key="NSvFlags">268</int>
 											<string key="NSFrame">{{53, 19}, {446, 20}}</string>
 											<reference key="NSSuperview" ref="295041998"/>
+											<reference key="NSWindow"/>
 											<string key="NSReuseIdentifierKey">_NS:9</string>
 											<string key="NSHuggingPriority">{250, 250}</string>
 											<int key="NSpiFlags">16397</int>
@@ -215,6 +221,7 @@
 											<int key="NSvFlags">268</int>
 											<string key="NSFrame">{{17, 22}, {16, 16}}</string>
 											<reference key="NSSuperview" ref="295041998"/>
+											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView" ref="643601670"/>
 											<string key="NSReuseIdentifierKey">_NS:945</string>
 											<int key="NSpiFlags">28938</int>
@@ -225,6 +232,7 @@
 											<int key="NSvFlags">268</int>
 											<string key="NSFrame">{{14, 62}, {82, 17}}</string>
 											<reference key="NSSuperview" ref="295041998"/>
+											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView" ref="605216515"/>
 											<string key="NSReuseIdentifierKey">_NS:1535</string>
 											<bool key="NSEnabled">YES</bool>
@@ -245,6 +253,7 @@
 											<int key="NSvFlags">268</int>
 											<string key="NSFrame">{{98, 55}, {404, 26}}</string>
 											<reference key="NSSuperview" ref="295041998"/>
+											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView" ref="48310739"/>
 											<string key="NSReuseIdentifierKey">_NS:9</string>
 											<string key="NSHuggingPriority">{242, 750}</string>
@@ -268,11 +277,11 @@
 													<string key="NSKeyEquiv">n</string>
 													<int key="NSMnemonicLoc">2147483647</int>
 													<int key="NSState">1</int>
-													<object class="NSCustomResource" key="NSOnImage" id="433912819">
+													<object class="NSCustomResource" key="NSOnImage">
 														<string key="NSClassName">NSImage</string>
 														<string key="NSResourceName">NSMenuCheckmark</string>
 													</object>
-													<object class="NSCustomResource" key="NSMixedImage" id="748084856">
+													<object class="NSCustomResource" key="NSMixedImage">
 														<string key="NSClassName">NSImage</string>
 														<string key="NSResourceName">NSMenuMixedState</string>
 													</object>
@@ -298,6 +307,7 @@
 									</array>
 									<string key="NSFrame">{{0, 176}, {505, 103}}</string>
 									<reference key="NSSuperview" ref="899740021"/>
+									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="257761973"/>
 									<string key="NSReuseIdentifierKey">_NS:13</string>
 									<string key="NSClassName">NSView</string>
@@ -305,6 +315,7 @@
 							</array>
 							<string key="NSFrameSize">{505, 279}</string>
 							<reference key="NSSuperview" ref="568628114"/>
+							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="1037603364"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<int key="NSDividerStyle">2</int>
@@ -312,6 +323,7 @@
 					</array>
 					<string key="NSFrameSize">{505, 279}</string>
 					<reference key="NSSuperview"/>
+					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="899740021"/>
 					<bool key="NSViewIsLayerTreeHost">YES</bool>
 				</object>
@@ -348,54 +360,9 @@
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<int key="NSDividerStyle">3</int>
 			</object>
-			<object class="NSMenu" id="457754445">
-				<string key="NSTitle"/>
-				<array class="NSMutableArray" key="NSMenuItems">
-					<object class="NSMenuItem" id="639664090">
-						<reference key="NSMenu" ref="457754445"/>
-						<string key="NSTitle">Select ISO File</string>
-						<string key="NSKeyEquiv"/>
-						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="433912819"/>
-						<reference key="NSMixedImage" ref="748084856"/>
-					</object>
-					<object class="NSMenuItem" id="120094928">
-						<reference key="NSMenu" ref="457754445"/>
-						<string key="NSTitle">Open Disk Utility</string>
-						<string key="NSKeyEquiv"/>
-						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="433912819"/>
-						<reference key="NSMixedImage" ref="748084856"/>
-					</object>
-					<object class="NSMenuItem" id="548833187">
-						<reference key="NSMenu" ref="457754445"/>
-						<string key="NSTitle">Update USB Device List</string>
-						<string key="NSKeyEquiv"/>
-						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="433912819"/>
-						<reference key="NSMixedImage" ref="748084856"/>
-					</object>
-				</array>
-			</object>
 		</array>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
 			<array class="NSMutableArray" key="connectionRecords">
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">dockMenu</string>
-						<reference key="source" ref="796877042"/>
-						<reference key="destination" ref="457754445"/>
-					</object>
-					<int key="connectionID">100209</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">openDiskUtility:</string>
-						<reference key="source" ref="512844837"/>
-						<reference key="destination" ref="120094928"/>
-					</object>
-					<int key="connectionID">100236</int>
-				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">usbDriveDropdown</string>
@@ -403,14 +370,6 @@
 						<reference key="destination" ref="605216515"/>
 					</object>
 					<int key="connectionID">100238</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">updateDeviceList:</string>
-						<reference key="source" ref="512844837"/>
-						<reference key="destination" ref="548833187"/>
-					</object>
-					<int key="connectionID">100240</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
@@ -451,14 +410,6 @@
 						<reference key="destination" ref="336928385"/>
 					</object>
 					<int key="connectionID">100259</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">openDocument:</string>
-						<reference key="source" ref="613418571"/>
-						<reference key="destination" ref="639664090"/>
-					</object>
-					<int key="connectionID">100234</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -1180,31 +1131,6 @@
 						<reference key="parent" ref="625402477"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">100205</int>
-						<reference key="object" ref="457754445"/>
-						<array class="NSMutableArray" key="children">
-							<reference ref="639664090"/>
-							<reference ref="120094928"/>
-							<reference ref="548833187"/>
-						</array>
-						<reference key="parent" ref="0"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100233</int>
-						<reference key="object" ref="639664090"/>
-						<reference key="parent" ref="457754445"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100235</int>
-						<reference key="object" ref="120094928"/>
-						<reference key="parent" ref="457754445"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100239</int>
-						<reference key="object" ref="548833187"/>
-						<reference key="parent" ref="457754445"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">100241</int>
 						<reference key="object" ref="700766082"/>
 						<array class="NSMutableArray" key="children">
@@ -1372,10 +1298,6 @@
 				<string key="100202.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="100203.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="100204.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="100205.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="100233.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="100235.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="100239.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<array key="100241.IBNSViewMetadataConstraints">
 					<reference ref="983361531"/>
 				</array>
@@ -1421,7 +1343,6 @@
 						<string key="makeLiveUSB:">id</string>
 						<string key="openDiskUtility:">id</string>
 						<string key="openGithubPage:">id</string>
-						<string key="showApplicationPrefs:">id</string>
 						<string key="updateDeviceList:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
@@ -1439,10 +1360,6 @@
 						</object>
 						<object class="IBActionInfo" key="openGithubPage:">
 							<string key="name">openGithubPage:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="showApplicationPrefs:">
-							<string key="name">showApplicationPrefs:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="updateDeviceList:">

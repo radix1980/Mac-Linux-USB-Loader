@@ -777,7 +777,7 @@
 				<int key="NSWindowBacking">2</int>
 				<string key="NSWindowRect">{{139, 157}, {447, 303}}</string>
 				<int key="NSWTFlags">-461896704</int>
-				<string key="NSWindowTitle">Window</string>
+				<string key="NSWindowTitle">About Window</string>
 				<string key="NSWindowClass">NSPanel</string>
 				<nil key="NSViewClass"/>
 				<nil key="NSUserInterfaceItemIdentifier"/>
@@ -1045,7 +1045,7 @@ VGhhbmtzIGEgbWlsbGlvbiE</bytes>
 									<reference key="NSDocView" ref="48996168"/>
 									<reference key="NSBGColor" ref="753378196"/>
 									<object class="NSCursor" key="NSCursor">
-										<string key="NSHotSpot">{5, 5}</string>
+										<string key="NSHotSpot">{1, -1}</string>
 										<int key="NSCursorType">0</int>
 									</object>
 									<int key="NScvFlags">4</int>
@@ -1253,7 +1253,7 @@ VGhhbmtzIGEgbWlsbGlvbiE</bytes>
 							</object>
 						</object>
 					</dictionary>
-					<array class="NSMutableArray" key="NSToolbarIBAllowedItems">
+					<array key="NSToolbarIBAllowedItems">
 						<reference ref="633962753"/>
 						<reference ref="67278707"/>
 						<reference ref="587460994"/>
@@ -1261,7 +1261,7 @@ VGhhbmtzIGEgbWlsbGlvbiE</bytes>
 						<reference ref="729514637"/>
 						<reference ref="458777459"/>
 					</array>
-					<array class="NSMutableArray" key="NSToolbarIBDefaultItems">
+					<array key="NSToolbarIBDefaultItems">
 						<reference ref="458777459"/>
 						<reference ref="483215310"/>
 					</array>
@@ -1270,7 +1270,7 @@ VGhhbmtzIGEgbWlsbGlvbiE</bytes>
 				<nil key="NSUserInterfaceItemIdentifier"/>
 				<string key="NSWindowContentMinSize">{374, 510}</string>
 				<object class="NSView" key="NSWindowView" id="214231509">
-					<reference key="NSNextResponder"/>
+					<nil key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
 					<array class="NSMutableArray" key="NSSubviews">
 						<object class="NSButton" id="817028143">
@@ -1318,8 +1318,6 @@ VGhhbmtzIGEgbWlsbGlvbiE</bytes>
 						</object>
 					</array>
 					<string key="NSFrameSize">{283, 168}</string>
-					<reference key="NSSuperview"/>
-					<reference key="NSNextKeyView"/>
 					<string key="NSReuseIdentifierKey">_NS:20</string>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1440, 878}}</string>
@@ -1339,7 +1337,7 @@ VGhhbmtzIGEgbWlsbGlvbiE</bytes>
 				<nil key="NSUserInterfaceItemIdentifier"/>
 				<string key="NSWindowContentMinSize">{480, 270}</string>
 				<object class="NSView" key="NSWindowView" id="788507395">
-					<reference key="NSNextResponder"/>
+					<nil key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
 					<array class="NSMutableArray" key="NSSubviews">
 						<object class="NSTextField" id="515826253">
@@ -1347,7 +1345,6 @@ VGhhbmtzIGEgbWlsbGlvbiE</bytes>
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{17, 233}, {137, 17}}</string>
 							<reference key="NSSuperview" ref="788507395"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="660968732"/>
 							<string key="NSReuseIdentifierKey">_NS:1535</string>
 							<bool key="NSEnabled">YES</bool>
@@ -1372,7 +1369,6 @@ VGhhbmtzIGEgbWlsbGlvbiE</bytes>
 							</set>
 							<string key="NSFrame">{{159, 231}, {179, 20}}</string>
 							<reference key="NSSuperview" ref="788507395"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="423748867"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<bool key="NSEnabled">YES</bool>
@@ -1421,7 +1417,6 @@ VGhhbmtzIGEgbWlsbGlvbiE</bytes>
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{29, 208}, {408, 17}}</string>
 							<reference key="NSSuperview" ref="788507395"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="295776239"/>
 							<string key="NSReuseIdentifierKey">_NS:1535</string>
 							<bool key="NSEnabled">YES</bool>
@@ -1446,7 +1441,6 @@ VGhhbmtzIGEgbWlsbGlvbiE</bytes>
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{17, 183}, {222, 17}}</string>
 							<reference key="NSSuperview" ref="788507395"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="788537421"/>
 							<string key="NSReuseIdentifierKey">_NS:1535</string>
 							<bool key="NSEnabled">YES</bool>
@@ -1467,7 +1461,6 @@ VGhhbmtzIGEgbWlsbGlvbiE</bytes>
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{241, 180}, {219, 22}}</string>
 							<reference key="NSSuperview" ref="788507395"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="1015974131"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<bool key="NSEnabled">YES</bool>
@@ -1495,7 +1488,6 @@ VGhhbmtzIGEgbWlsbGlvbiE</bytes>
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{20, 162}, {13, 13}}</string>
 							<reference key="NSSuperview" ref="788507395"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="595516245"/>
 							<string key="NSReuseIdentifierKey">_NS:1622</string>
 							<bool key="NSEnabled">YES</bool>
@@ -1520,8 +1512,6 @@ VGhhbmtzIGEgbWlsbGlvbiE</bytes>
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{35, 160}, {119, 17}}</string>
 							<reference key="NSSuperview" ref="788507395"/>
-							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView"/>
 							<string key="NSReuseIdentifierKey">_NS:1535</string>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="676501052">
@@ -1538,8 +1528,6 @@ VGhhbmtzIGEgbWlsbGlvbiE</bytes>
 						</object>
 					</array>
 					<string key="NSFrameSize">{480, 270}</string>
-					<reference key="NSSuperview"/>
-					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="515826253"/>
 					<string key="NSReuseIdentifierKey">_NS:21</string>
 				</object>
@@ -1548,6 +1536,35 @@ VGhhbmtzIGEgbWlsbGlvbiE</bytes>
 				<string key="NSMaxSize">{10000000000000, 10000000000000}</string>
 				<int key="NSWindowCollectionBehavior">2</int>
 				<bool key="NSWindowIsRestorable">YES</bool>
+			</object>
+			<object class="NSMenu" id="255911094">
+				<string key="NSTitle">Dock Menu</string>
+				<array class="NSMutableArray" key="NSMenuItems">
+					<object class="NSMenuItem" id="428749403">
+						<reference key="NSMenu" ref="255911094"/>
+						<string key="NSTitle">Select ISO File</string>
+						<string key="NSKeyEquiv"/>
+						<int key="NSMnemonicLoc">2147483647</int>
+						<reference key="NSOnImage" ref="1033313550"/>
+						<reference key="NSMixedImage" ref="310636482"/>
+					</object>
+					<object class="NSMenuItem" id="326671768">
+						<reference key="NSMenu" ref="255911094"/>
+						<string key="NSTitle">Update List of USB Devices</string>
+						<string key="NSKeyEquiv"/>
+						<int key="NSMnemonicLoc">2147483647</int>
+						<reference key="NSOnImage" ref="1033313550"/>
+						<reference key="NSMixedImage" ref="310636482"/>
+					</object>
+					<object class="NSMenuItem" id="597041922">
+						<reference key="NSMenu" ref="255911094"/>
+						<string key="NSTitle">Open Disk Utility</string>
+						<string key="NSKeyEquiv"/>
+						<int key="NSMnemonicLoc">2147483647</int>
+						<reference key="NSOnImage" ref="1033313550"/>
+						<reference key="NSMixedImage" ref="310636482"/>
+					</object>
+				</array>
 			</object>
 		</array>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
@@ -1559,6 +1576,14 @@ VGhhbmtzIGEgbWlsbGlvbiE</bytes>
 						<reference key="destination" ref="632727374"/>
 					</object>
 					<int key="connectionID">448</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">dockMenu</string>
+						<reference key="source" ref="1050"/>
+						<reference key="destination" ref="255911094"/>
+					</object>
+					<int key="connectionID">721</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
@@ -1882,6 +1907,14 @@ VGhhbmtzIGEgbWlsbGlvbiE</bytes>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
+						<string key="label">openDocument:</string>
+						<reference key="source" ref="1014"/>
+						<reference key="destination" ref="428749403"/>
+					</object>
+					<int key="connectionID">724</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
 						<string key="label">makeKeyAndOrderFront:</string>
 						<reference key="source" ref="1009711581"/>
 						<reference key="destination" ref="238522557"/>
@@ -1911,6 +1944,22 @@ VGhhbmtzIGEgbWlsbGlvbiE</bytes>
 						<reference key="destination" ref="799737216"/>
 					</object>
 					<int key="connectionID">618</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">openDiskUtility:</string>
+						<reference key="source" ref="737481470"/>
+						<reference key="destination" ref="597041922"/>
+					</object>
+					<int key="connectionID">722</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">updateDeviceList:</string>
+						<reference key="source" ref="737481470"/>
+						<reference key="destination" ref="326671768"/>
+					</object>
+					<int key="connectionID">723</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
@@ -3645,6 +3694,31 @@ VGhhbmtzIGEgbWlsbGlvbiE</bytes>
 						<reference key="object" ref="817236030"/>
 						<reference key="parent" ref="788507395"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">717</int>
+						<reference key="object" ref="255911094"/>
+						<array class="NSMutableArray" key="children">
+							<reference ref="428749403"/>
+							<reference ref="326671768"/>
+							<reference ref="597041922"/>
+						</array>
+						<reference key="parent" ref="0"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">718</int>
+						<reference key="object" ref="428749403"/>
+						<reference key="parent" ref="255911094"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">719</int>
+						<reference key="object" ref="326671768"/>
+						<reference key="parent" ref="255911094"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">720</int>
+						<reference key="object" ref="597041922"/>
+						<reference key="parent" ref="255911094"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -3895,7 +3969,11 @@ VGhhbmtzIGEgbWlsbGlvbiE</bytes>
 				<string key="711.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="714.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="716.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="717.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="718.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="719.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="72.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="720.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="73.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="79.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="81.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3906,7 +3984,7 @@ VGhhbmtzIGEgbWlsbGlvbiE</bytes>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">716</int>
+			<int key="maxID">724</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -3918,7 +3996,6 @@ VGhhbmtzIGEgbWlsbGlvbiE</bytes>
 						<string key="makeLiveUSB:">id</string>
 						<string key="openDiskUtility:">id</string>
 						<string key="openGithubPage:">id</string>
-						<string key="showApplicationPrefs:">id</string>
 						<string key="updateDeviceList:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
@@ -3936,10 +4013,6 @@ VGhhbmtzIGEgbWlsbGlvbiE</bytes>
 						</object>
 						<object class="IBActionInfo" key="openGithubPage:">
 							<string key="name">openGithubPage:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="showApplicationPrefs:">
-							<string key="name">showApplicationPrefs:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="updateDeviceList:">

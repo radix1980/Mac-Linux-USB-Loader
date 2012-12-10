@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		244E560916755CA300F80E78 /* RHPreferences.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 244E560816755CA300F80E78 /* RHPreferences.framework */; };
 		24C9FCCE1664204B0080E6E4 /* USBDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C9FCCD1664204B0080E6E4 /* USBDevice.m */; };
 		24CA6BEE1656F7A700061D2F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CA6BED1656F7A700061D2F /* Cocoa.framework */; };
 		24CA6BF81656F7A700061D2F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24CA6BF61656F7A700061D2F /* InfoPlist.strings */; };
@@ -20,7 +21,20 @@
 		24DB8AB91659AB0700F7C947 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 24DB8AB81659AB0700F7C947 /* README */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		244E560316755B4A00F80E78 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		244E560816755CA300F80E78 /* RHPreferences.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RHPreferences.framework; sourceTree = "<group>"; };
 		24C9FCCC1664204B0080E6E4 /* USBDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USBDevice.h; sourceTree = "<group>"; };
 		24C9FCCD1664204B0080E6E4 /* USBDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USBDevice.m; sourceTree = "<group>"; };
 		24CA6BE91656F7A700061D2F /* Mac Linux USB Loader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mac Linux USB Loader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +64,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24CA6BEE1656F7A700061D2F /* Cocoa.framework in Frameworks */,
+				244E560916755CA300F80E78 /* RHPreferences.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +95,7 @@
 		24CA6BEC1656F7A700061D2F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				244E560816755CA300F80E78 /* RHPreferences.framework */,
 				24CA6BED1656F7A700061D2F /* Cocoa.framework */,
 				24CA6BEF1656F7A700061D2F /* Other Frameworks */,
 			);
@@ -142,6 +158,7 @@
 				24CA6BE51656F7A700061D2F /* Sources */,
 				24CA6BE61656F7A700061D2F /* Frameworks */,
 				24CA6BE71656F7A700061D2F /* Resources */,
+				244E560316755B4A00F80E78 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -294,6 +311,10 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Mac Linux USB Loader/Mac Linux USB Loader.entitlements";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mac Linux USB Loader/Mac Linux USB Loader-Prefix.pch";
 				INFOPLIST_FILE = "Mac Linux USB Loader/Mac Linux USB Loader-Info.plist";
@@ -308,6 +329,10 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Mac Linux USB Loader/Mac Linux USB Loader.entitlements";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mac Linux USB Loader/Mac Linux USB Loader-Prefix.pch";
 				INFOPLIST_FILE = "Mac Linux USB Loader/Mac Linux USB Loader-Info.plist";

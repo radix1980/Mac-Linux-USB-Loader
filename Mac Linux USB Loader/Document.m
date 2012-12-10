@@ -9,6 +9,9 @@
 #import "Document.h"
 #import "USBDevice.h"
 
+#import "RHPreferences/RHPreferences.h"
+#import "RHPreferences/RHPreferencesWindowController.h"
+
 @implementation Document
 
 @synthesize usbDriveDropdown;
@@ -116,6 +119,19 @@ USBDevice *device;
 
 - (IBAction)openGithubPage:(id)sender {
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://github.com/SevenBits/Mac-Linux-USB-Loader"]];
+}
+
+- (IBAction)showPrefsPane:(id)sender {
+    //if we have not created the window controller yet, create it now
+    /*RHAccountsViewController *accounts = [[[RHAccountsViewController alloc] init] autorelease];
+    RHAboutViewController *about = [[[RHAboutViewController alloc] init] autorelease];
+    RHWideViewController *wide = [[[RHWideViewController alloc] init] autorelease]; */
+        
+    NSArray *controllers = [NSArray arrayWithObjects:nil, nil];
+
+    RHPreferencesWindowController *preferencesWindowController = [[RHPreferencesWindowController alloc] initWithViewControllers:controllers andTitle:NSLocalizedString(@"Preferences", @"Preferences Window Title")];
+    
+    [preferencesWindowController showWindow:self];
 }
 
 + (BOOL)autosavesInPlace

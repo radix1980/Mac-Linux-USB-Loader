@@ -19,6 +19,7 @@
 - (IBAction)updateDeviceList:(id)sender;
 - (IBAction)makeLiveUSB:(id)sender;
 - (IBAction)openGithubPage:(id)sender;
+- (IBAction)showPrefsPane:(id)sender;
 @property (unsafe_unretained) IBOutlet NSPopUpButton *usbDriveDropdown;
 
 

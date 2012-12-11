@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24434A1A1677CE2100DAC959 /* RHPreferences.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24434A191677CE2100DAC959 /* RHPreferences.framework */; };
+		24434A391677D52800DAC959 /* AboutPreferences.png in Resources */ = {isa = PBXBuildFile; fileRef = 24434A211677D52800DAC959 /* AboutPreferences.png */; };
+		24434A3A1677D52800DAC959 /* AccountsPreferences.png in Resources */ = {isa = PBXBuildFile; fileRef = 24434A221677D52800DAC959 /* AccountsPreferences.png */; };
+		24434A3B1677D52800DAC959 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 24434A241677D52800DAC959 /* Credits.rtf */; };
+		24434A3C1677D52800DAC959 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24434A261677D52800DAC959 /* InfoPlist.strings */; };
+		24434A3D1677D52800DAC959 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24434A281677D52800DAC959 /* MainMenu.xib */; };
+		24434A3F1677D52800DAC959 /* RHAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24434A2C1677D52800DAC959 /* RHAboutViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		24434A401677D52800DAC959 /* RHAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24434A2D1677D52800DAC959 /* RHAboutViewController.xib */; };
+		24434A411677D52800DAC959 /* RHAccountsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24434A2F1677D52800DAC959 /* RHAccountsViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		24434A421677D52800DAC959 /* RHAccountsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24434A301677D52800DAC959 /* RHAccountsViewController.xib */; };
+		24434A431677D52800DAC959 /* RHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24434A321677D52800DAC959 /* RHAppDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		24434A441677D52800DAC959 /* RHPreferencesTester-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24434A331677D52800DAC959 /* RHPreferencesTester-Info.plist */; };
+		24434A451677D52800DAC959 /* RHWideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24434A361677D52800DAC959 /* RHWideViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		24434A461677D52800DAC959 /* RHWideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24434A371677D52800DAC959 /* RHWideViewController.xib */; };
+		24434A471677D52800DAC959 /* WidePreferences.png in Resources */ = {isa = PBXBuildFile; fileRef = 24434A381677D52800DAC959 /* WidePreferences.png */; };
 		244E560916755CA300F80E78 /* RHPreferences.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 244E560816755CA300F80E78 /* RHPreferences.framework */; };
 		24C9FCCE1664204B0080E6E4 /* USBDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C9FCCD1664204B0080E6E4 /* USBDevice.m */; };
 		24CA6BEE1656F7A700061D2F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CA6BED1656F7A700061D2F /* Cocoa.framework */; };
@@ -28,12 +43,33 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				24434A1A1677CE2100DAC959 /* RHPreferences.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		24434A191677CE2100DAC959 /* RHPreferences.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RHPreferences.framework; sourceTree = "<group>"; };
+		24434A211677D52800DAC959 /* AboutPreferences.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AboutPreferences.png; sourceTree = "<group>"; };
+		24434A221677D52800DAC959 /* AccountsPreferences.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AccountsPreferences.png; sourceTree = "<group>"; };
+		24434A251677D52800DAC959 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = Credits.rtf; sourceTree = "<group>"; };
+		24434A271677D52800DAC959 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		24434A291677D52800DAC959 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = MainMenu.xib; sourceTree = "<group>"; };
+		24434A2B1677D52800DAC959 /* RHAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHAboutViewController.h; sourceTree = "<group>"; };
+		24434A2C1677D52800DAC959 /* RHAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHAboutViewController.m; sourceTree = "<group>"; };
+		24434A2D1677D52800DAC959 /* RHAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RHAboutViewController.xib; sourceTree = "<group>"; };
+		24434A2E1677D52800DAC959 /* RHAccountsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHAccountsViewController.h; sourceTree = "<group>"; };
+		24434A2F1677D52800DAC959 /* RHAccountsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHAccountsViewController.m; sourceTree = "<group>"; };
+		24434A301677D52800DAC959 /* RHAccountsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RHAccountsViewController.xib; sourceTree = "<group>"; };
+		24434A311677D52800DAC959 /* RHAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHAppDelegate.h; sourceTree = "<group>"; };
+		24434A321677D52800DAC959 /* RHAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHAppDelegate.m; sourceTree = "<group>"; };
+		24434A331677D52800DAC959 /* RHPreferencesTester-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RHPreferencesTester-Info.plist"; sourceTree = "<group>"; };
+		24434A341677D52800DAC959 /* RHPreferencesTester-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RHPreferencesTester-Prefix.pch"; sourceTree = "<group>"; };
+		24434A351677D52800DAC959 /* RHWideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHWideViewController.h; sourceTree = "<group>"; };
+		24434A361677D52800DAC959 /* RHWideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHWideViewController.m; sourceTree = "<group>"; };
+		24434A371677D52800DAC959 /* RHWideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RHWideViewController.xib; sourceTree = "<group>"; };
+		24434A381677D52800DAC959 /* WidePreferences.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WidePreferences.png; sourceTree = "<group>"; };
 		244E560816755CA300F80E78 /* RHPreferences.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RHPreferences.framework; sourceTree = "<group>"; };
 		24C9FCCC1664204B0080E6E4 /* USBDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USBDevice.h; sourceTree = "<group>"; };
 		24C9FCCD1664204B0080E6E4 /* USBDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USBDevice.m; sourceTree = "<group>"; };
@@ -71,9 +107,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24434A201677D50800DAC959 /* Preferences View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				24434A211677D52800DAC959 /* AboutPreferences.png */,
+				24434A221677D52800DAC959 /* AccountsPreferences.png */,
+				24434A231677D52800DAC959 /* en.lproj */,
+				24434A2B1677D52800DAC959 /* RHAboutViewController.h */,
+				24434A2C1677D52800DAC959 /* RHAboutViewController.m */,
+				24434A2D1677D52800DAC959 /* RHAboutViewController.xib */,
+				24434A2E1677D52800DAC959 /* RHAccountsViewController.h */,
+				24434A2F1677D52800DAC959 /* RHAccountsViewController.m */,
+				24434A301677D52800DAC959 /* RHAccountsViewController.xib */,
+				24434A311677D52800DAC959 /* RHAppDelegate.h */,
+				24434A321677D52800DAC959 /* RHAppDelegate.m */,
+				24434A331677D52800DAC959 /* RHPreferencesTester-Info.plist */,
+				24434A341677D52800DAC959 /* RHPreferencesTester-Prefix.pch */,
+				24434A351677D52800DAC959 /* RHWideViewController.h */,
+				24434A361677D52800DAC959 /* RHWideViewController.m */,
+				24434A371677D52800DAC959 /* RHWideViewController.xib */,
+				24434A381677D52800DAC959 /* WidePreferences.png */,
+			);
+			name = "Preferences View Controllers";
+			sourceTree = "<group>";
+		};
+		24434A231677D52800DAC959 /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				24434A241677D52800DAC959 /* Credits.rtf */,
+				24434A261677D52800DAC959 /* InfoPlist.strings */,
+				24434A281677D52800DAC959 /* MainMenu.xib */,
+			);
+			path = en.lproj;
+			sourceTree = "<group>";
+		};
 		24CA6BDE1656F7A700061D2F = {
 			isa = PBXGroup;
 			children = (
+				24434A201677D50800DAC959 /* Preferences View Controllers */,
+				24434A191677CE2100DAC959 /* RHPreferences.framework */,
 				24DB8AB81659AB0700F7C947 /* README */,
 				24CA6C17165701F000061D2F /* EFI-Ubuntu */,
 				24CA6C13165701A900061D2F /* Icon.icns */,
@@ -207,6 +279,16 @@
 				24CA6C071656F7A700061D2F /* MainMenu.xib in Resources */,
 				24CA6C14165701A900061D2F /* Icon.icns in Resources */,
 				24DB8AB91659AB0700F7C947 /* README in Resources */,
+				24434A391677D52800DAC959 /* AboutPreferences.png in Resources */,
+				24434A3A1677D52800DAC959 /* AccountsPreferences.png in Resources */,
+				24434A3B1677D52800DAC959 /* Credits.rtf in Resources */,
+				24434A3C1677D52800DAC959 /* InfoPlist.strings in Resources */,
+				24434A3D1677D52800DAC959 /* MainMenu.xib in Resources */,
+				24434A401677D52800DAC959 /* RHAboutViewController.xib in Resources */,
+				24434A421677D52800DAC959 /* RHAccountsViewController.xib in Resources */,
+				24434A441677D52800DAC959 /* RHPreferencesTester-Info.plist in Resources */,
+				24434A461677D52800DAC959 /* RHWideViewController.xib in Resources */,
+				24434A471677D52800DAC959 /* WidePreferences.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,12 +302,40 @@
 				24CA6BFA1656F7A700061D2F /* main.m in Sources */,
 				24CA6C011656F7A700061D2F /* Document.m in Sources */,
 				24C9FCCE1664204B0080E6E4 /* USBDevice.m in Sources */,
+				24434A3F1677D52800DAC959 /* RHAboutViewController.m in Sources */,
+				24434A411677D52800DAC959 /* RHAccountsViewController.m in Sources */,
+				24434A431677D52800DAC959 /* RHAppDelegate.m in Sources */,
+				24434A451677D52800DAC959 /* RHWideViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		24434A241677D52800DAC959 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24434A251677D52800DAC959 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		24434A261677D52800DAC959 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24434A271677D52800DAC959 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		24434A281677D52800DAC959 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24434A291677D52800DAC959 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
 		24CA6BF61656F7A700061D2F /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

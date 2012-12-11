@@ -47,8 +47,8 @@ USBDevice *device;
     
     isoFilePath = [[self fileURL] absoluteString];
     
-    if (isoFilePath == nil || [usbDriveDropdown numberOfItems] == 1) {
-        [makeUSBButton setEnabled: NO];
+    if (isoFilePath != nil) {
+        [makeUSBButton setEnabled: YES];
     }
     
     [self getUSBDeviceList];
@@ -79,7 +79,7 @@ USBDevice *device;
         }
     }
     
-    if (isoFilePath == nil && [usbDriveDropdown numberOfItems] != 1) {
+    if (isoFilePath != nil && [usbDriveDropdown numberOfItems] != 1) {
         [makeUSBButton setEnabled: YES];
     }
     
@@ -97,20 +97,18 @@ USBDevice *device;
         [makeUSBButton setEnabled: NO];
     }
     
-    if ([usbDriveDropdown numberOfItems] != 1) {
-        NSString* directoryName = [usbDriveDropdown titleOfSelectedItem];
-        NSString* usbRoot = [usbs valueForKey:directoryName];
+    NSString* directoryName = [usbDriveDropdown titleOfSelectedItem];
+    NSString* usbRoot = [usbs valueForKey:directoryName];
         
-        [spinner setUsesThreadedAnimation:YES];
-        [spinner setDoubleValue:0.0];
-        [spinner startAnimation:self];
-        // Make the Live USB!
-        if ([device prepareUSB:usbRoot] == YES) {
-            [spinner setDoubleValue:50.0];
-            [device copyISO:usbRoot:isoFilePath];
-            [spinner setDoubleValue:100.0];
-            [spinner stopAnimation:self];
-        }
+    [spinner setUsesThreadedAnimation:YES];
+    [spinner setDoubleValue:0.0];
+    [spinner startAnimation:self];
+    // Make the Live USB!
+    if ([device prepareUSB:usbRoot] == YES) {
+        [spinner setDoubleValue:50.0];
+        [device copyISO:usbRoot:isoFilePath];
+        [spinner setDoubleValue:100.0];
+        [spinner stopAnimation:self];
     }
     else {
         // TODO
@@ -123,9 +121,9 @@ USBDevice *device;
 
 - (IBAction)showPrefsPane:(id)sender {
     //if we have not created the window controller yet, create it now
-    /*RHAccountsViewController *accounts = [[[RHAccountsViewController alloc] init] autorelease];
-    RHAboutViewController *about = [[[RHAboutViewController alloc] init] autorelease];
-    RHWideViewController *wide = [[[RHWideViewController alloc] init] autorelease]; */
+    /*RHAccountsViewController *accounts = [[RHAccountsViewController alloc] init];
+    RHAboutViewController *about = [[RHAboutViewController alloc] init];
+    RHWideViewController *wide = [[RHWideViewController alloc] init]; */
         
     NSArray *controllers = [NSArray arrayWithObjects:nil, nil];
 
